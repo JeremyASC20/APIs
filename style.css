@@ -1,0 +1,109 @@
+#navigation_bars {
+    display: flex;
+}
+
+#left_bar {
+    margin-top: 50px;
+    margin-left: 25px;
+    height: 500px;
+    width: 200px;
+    border: 2px black solid;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar {
+    margin-top: 40px;
+    align-items: center;
+    border: 2px solid black;
+}
+
+#navbaritems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    /* border: 2px solid black; */
+}
+
+#top_bar {
+    margin-top: 50px;
+    margin-left: 25px;
+    height: 100px;
+    width: 1300px;
+    border: 2px black solid;
+    background-color: rgb(7, 7, 7);
+}
+
+#top_bar img {
+    width: 100px;
+}
+
+#top_bar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: 2px solid black;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+#button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: solid black;
+}
+
+#racialD {
+    display:flex;
+    background-color: red;
+    margin-top: 25px;
+}
+
+#environmental {
+    display:flex;
+    background-color: red;
+    margin-top: 25px;
+}
+
+#globalP {
+    display:flex;
+    background-color: red;
+    margin-top: 25px;
+}
+
+#currentE {
+    display:flex;
+    background-color: skyblue;
+    margin-top: 25px;
+}
+
+.homemodule {
+    width:630px;
+    height:530px;
+    margin-left: auto;
+
+}
+
+#level1 {
+    display: flex;
+}
+
+#level2 {
+    display: flex;
+}
+
+#levels {
+    display: flex;
+    flex-direction: column;
+}
+
+#CovidMap {
+    width: 250px;
+    height: 150px;
+}

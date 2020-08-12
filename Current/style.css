@@ -1,0 +1,37 @@
+#current {
+    text-align: center;
+}
+
+#level1 {
+    display: flex;
+    justify-content: center;
+}
+
+#level1 iframe {
+    border-radius: 10px;
+}
+
+#level1 h3 {
+    margin-left: 20px;
+    margin-top: 200px;
+}
+
+#level2 {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#level2 iframe {
+    border-radius: 10px;
+}
+
+#level2 h3 {
+    width: 490px;
+    margin-left: 20px;
+    margin-top: 200px;
+}
+
+#description {
+    text-align: center;
+}

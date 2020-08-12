@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatroomstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@900&display=swap" rel="stylesheet">
+    <link rel="icon" type="images/png" href="images/logo copy.jfif">
+    <title>Chatroom</title>
+</head>
+<body>
+    <div id="beforeDiv">
+    <div id="chatroomtitle">Chatroom</div>
+    <div id="before_login">
+        <form>
+            Username: <input type="text" id="username_textbox">
+            <button id="save"> Save Username</button>
+        </form>
+    </div>
+    </div>
+
+    <div id="after_login">
+        <div id="buttonChoice">
+        <button id="discriminationButton">Discrimination</button>            
+        <button id="environmentalButton">Environmental</button>            
+        <button id="currentButton">Current Events</button>
+        <button id="pandemicButton">Pandemic</button>
+        </div>
+        <div id="chatroom"></div>
+        <br><br>
+        <form>
+            <input type="text" id="user_chat">
+            <button id="Submit">Submit Chat</button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-firestore.memory.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-auth.js"></script>
+  
+    <script>
+      // ADD YOUR firebaseConfig HERE
+            const firebaseConfig = {
+            apiKey: "AIzaSyALOepA8XsGGE5jt2NJ1sVEqVmB4o03eKk",
+            authDomain: "apis-b486c.firebaseapp.com",
+            databaseURL: "https://apis-b486c.firebaseio.com",
+            projectId: "apis-b486c",
+            storageBucket: "apis-b486c.appspot.com",
+            messagingSenderId: "564911288227",
+            appId: "1:564911288227:web:abd143eda2fba44861b416",
+            measurementId: "G-FR6TQ432KE"
+            };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // initialize connection to our database
+
+        let db = firebase.firestore();
+        console.log("Success!")
+
+        // get references
+
+        let userInputTextbox = document.getElementById("user_chat")
+        let submitButton = document.getElementById("Submit")
+        let chatroomDiv = document.getElementById("chatroom")
+        let usernameTextbox = document.getElementById("username_textbox")
+        let saveButton = document.getElementById("save")
+        let beforeLoginDiv = document.getElementById("before_login")
+        let afterLoginDiv = document.getElementById("after_login")
+
+        afterLoginDiv.style.display = "none"
+        beforeLoginDiv.style.display = "flex"
+        
+
+        let username;
+
+        saveButton.onclick = function(event) {
+            event.preventDefault()
+            username = usernameTextbox.value
+            console.log(username)
+
+        // hide beforeLogin and show afterLogin
+
+            beforeLoginDiv.style.display = "none"
+            afterLoginDiv.style.display = "flex"
+        }
+
+        submitButton.onclick = function(event) {
+        event.preventDefault()
+
+        //time
+        
+        let now = new Date()
+        let timestamp = new Date().getTime()
+        console.log(now)
+        console.log(timestamp)
+
+        // save data to database
+        db.collection("chatroom").add({
+            "username": username,
+            "chat": userInputTextbox.value,
+            "timestamp": timestamp
+        })
+
+        userInputTextbox.value = ""
+
+        }
+
+        db.collection("chatroom").orderBy("timestamp").onSnapshot(function(snapshot) {
+
+        chatroomDiv.innerHTML = ""
+        for (let i = 0; i < snapshot.docs.length; i++) {
+            chatroomDiv.innerHTML += snapshot.docs[i].data().username + ": ",
+            chatroomDiv.innerHTML += snapshot.docs[i].data().chat + "<br>"
+        }
+        })
+
+        </script>
+
+</body>
+</html>

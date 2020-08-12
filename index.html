@@ -6,17 +6,20 @@
     <title>APIs</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="icon" type="image/jfif" href="images/logo.jfif">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
 
         <div id="navigation_bars">
             <div id="left_bar">
-                <div id="navbar">Navigation bar</div>
+                <!-- <div id="navbar">Navigation bar</div> -->
                     <div  id="navbaritems">
-                        <div class="navbaritems">Racial Discrmination</div>
-                        <div class="navbaritems">Environmental</div>
-                        <div class="navbaritems">Global Pandemic</div>
-                        <div class="navbaritems">Current Events</div>
+                        <a class="nav" href="Discrimination" target="_blank">Discrimination</a>
+                        <a class="nav" href="Environmental/" target="_blank">Environmental</a>
+                        <a class="nav" href="Global_Pandemic/" target="_blank">Global Pandemic</a>
+                        <a class="nav" href="Current/" target="_blank">Current Events</a>
+                        <a class="nav" href="Chatroom/" target="_blank">Chatroom</a>
                     </div>
             </div>
             <div id="content">
@@ -27,15 +30,34 @@
                 </div>
                 <div id="levels">
                     <div id="level1">
-                        <div id="racialD" class="homemodule">Racial Discrmination</div>
-                         <div id="environmental" class="homemodule">Environmental</div>
+                        <a class="a_tag" href="Discrimination/" target="_blank"><div id="racialD" class="homemodule">
+                            <p>Discrmination</p>
+                            <img id="protest" src="images/protest.jpg">
+                            <h3>"There are very few African American men in this country who haven’t had the experience of being followed when they were shopping in a department store. That includes me." -Barack Obama</h3>
+                            <h3>"since Trump took office, surveys and studies have shown that Latinos, particularly Latino immigrants, have become more insecure and fearful about their place in the country."</h3>
+                        </div></a>
+                        <a class="a_tag" href="Environmental" target="_blank"><div id="environmental" class="homemodule">
+                            <p>Environmental</p>
+                            <img id="polar_bear" src="images/polar.jpg">
+                            <img id="ice_mass" src="images/ice_mass.png">
+                        </div></a>
                     </div>
                     <div id="level2">
-                        <div id="globalP" class="homemodule">Global Pandemic</div>
-                        <div id="currentE" class="homemodule">
-                            <!-- <p>Current Events</p> -->
+                        <a class="a_tag" href="Global_Pandemic" target="_blank"><div id="globalP" class="homemodule">
+                            <p>Global Pandemic</p>
                             <img id="CovidMap" src="images/CovidMap.png">
-                        </div>
+                            <img id="COVIDcount" src="images/COVIDcount.png">
+                        </div></a>
+                        <a class="a_tag" href="Current" target="_blank"><div id="currentE" class="homemodule">
+                            <p>Current Events</p>
+                            <img id="explosion" src="images/explosion.jpg">
+                            <h3>
+                                "It is a political, moral, economic and financial crisis whose first victim is the Lebanese population," says Emmanuel Macron, the French President.
+                            </h3>
+                            <h2 id="ban">
+                                "The big legal questions behind Trump’s TikTok and WeChat bans"
+                            </h2>
+                        </div></a>
                     </div>
                 </div>
             </div>

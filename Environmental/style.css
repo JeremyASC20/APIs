@@ -1,0 +1,42 @@
+#environmental h1 {
+    text-align: center;
+}
+
+#graph {
+    text-align: center;
+}
+
+#level1 {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-family: 'Recursive', sans-serif;
+}
+
+#GT {
+    width: 737px;
+}
+
+#SI {
+    width: 737px;
+}
+
+#level2 {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-family: 'Recursive', sans-serif;
+}
+
+#CD {
+    width: 737px;
+}
+
+#ice {
+    width: 737px;
+}
+
+#videos {
+    text-align: center;
+    margin-top: 20px;
+}

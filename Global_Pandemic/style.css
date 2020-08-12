@@ -1,0 +1,39 @@
+body {
+    background-color: #F8F8FF;
+}
+
+#COVID h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#CDC {
+    display: flex;
+}
+
+.mb-3 {
+    width: 750px;
+    margin: 50px;
+}
+
+#realTime { 
+    text-align: center;
+}
+
+#videos {
+    text-align: center;
+}
+#videos img {
+    width: 600px;
+}
+
+#videos iframe {
+    border-radius: 10px;
+    margin: 50px;
+}
+
+#description h3 {
+    text-align: center;
+    font-family: 'Recursive', sans-serif;
+    font-size: 20px;
+}

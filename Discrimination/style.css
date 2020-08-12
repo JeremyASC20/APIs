@@ -1,0 +1,38 @@
+#discrimination h1 {
+    text-align: center;
+}
+
+#top {
+    text-align: center;
+    background-color: red;
+    color: white;
+    margin: 0px;
+    font-size: 35px;
+}
+
+#bottom {
+    text-align: center;
+    font-size: 20px;
+}
+
+.images {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+
+#live {
+    width: 547px;
+}
+
+#description {
+    margin: 50px 400px;
+    color: red;
+    width: 900px;
+}
+
+#hurt {
+    width: 420px;
+}

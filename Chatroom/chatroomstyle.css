@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: rgb(211,211,211);
     font-family: 'Recursive', sans-serif;
 }
 
@@ -98,4 +98,11 @@ body {
     background-color: wheat;
     margin-right: 33%;
     margin-left: 33%;
+}
+
+#homelogo {
+    width: 50px;
+    height:50px;
+    display:flex;
+    margin-left: 10px;
 }

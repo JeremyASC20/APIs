@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(211,211,211);
+}
+
+h1 {
+    text-align: center;
+}
+
+#homelogo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-left: 10px;
+}
+
+#level1 {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-family: 'Recursive', sans-serif;
+}
+
+#BLM {
+    width: 300px;
+    border: black 2px solid;
+}
+
+#level1 a {
+    color: green;
+}
+
+#level1 h3 {
+    padding-top: 125px;
+}
+
+#level2 {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-family: 'Recursive', sans-serif;
+}
+
+#environment {
+    width: 600px;
+    border: black 2px solid;
+}
+
+#level2 h3 {
+    padding-top: 125px;
+    width: 989.931px;
+}
+
+#level2 a {
+    color: green;
+}
+
+#level3 {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-family: 'Recursive', sans-serif;
+}
+
+#COVID {
+    width: 600px;
+    border: black 2px solid;
+}
+
+#level3 h3 {
+    padding-top: 125px;
+    width: 989.931px;
+}
+
+#level3 a {
+    color: green;
+}
+
+#level4 {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-family: 'Recursive', sans-serif;
+}
+
+#current {
+    width: 600px;
+    border: black 2px solid;
+}
+
+#level4 h3 {
+    padding-top: 125px;
+    width: 989.931px;
+}
+
+#level4 a {
+    color: green;
+}

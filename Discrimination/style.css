@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(211,211,211);
+}
+
 #discrimination h1 {
     text-align: center;
 }
@@ -35,4 +39,11 @@
 
 #hurt {
     width: 420px;
+}
+
+#homelogo {
+    width: 50px;
+    height:50px;
+    display:flex;
+    margin-left: 10px;
 }

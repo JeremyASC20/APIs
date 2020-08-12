@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="chatroomstyle.css">
+    <script src="sketch.js" defer></script>
+    <link rel="icon" type="image/jfif" href="images/logo copy.jfif">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@900&display=swap" rel="stylesheet">
     <title>Chatroom</title>
 </head>
 <body>
+    <a href="/"><img id="homelogo" src="images/logo copy.jfif"></a>
+
     <div id="beforeDiv">
     <div id="chatroomtitle">Chatroom</div>
     <div id="before_login">
@@ -335,6 +339,7 @@
         
         currentChatroomDiv.innerHTML = ""
         for (let i = 0; i < snapshot.docs.length; i++) {
+            currentChatroomDiv.innerHTML += snapshot.docs[i].data().timestamp + " ",
             currentChatroomDiv.innerHTML += snapshot.docs[i].data().username + ": ",
             currentChatroomDiv.innerHTML += snapshot.docs[i].data().currentChat + "<br>"
         }

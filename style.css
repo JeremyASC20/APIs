@@ -3,6 +3,10 @@ html {
     height: auto;
 }
 
+body{
+    background-color: rgb(211,211,211);
+}
+
 .nav {
     color: black;
 }

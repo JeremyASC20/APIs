@@ -1,3 +1,7 @@
+body {
+   background-color: rgb(211,211,211);
+}
+
 #environmental h1 {
     text-align: center;
 }
@@ -47,4 +51,11 @@
 #videos {
     text-align: center;
     margin-top: 20px;
+}
+
+#homelogo {
+    width: 50px;
+    height:50px;
+    display:flex;
+    margin-left: 10px;
 }

@@ -14,11 +14,15 @@
 }
 
 #GT {
+    padding: 10px;
     width: 737px;
+    border: 3px solid black;
 }
 
 #SI {
+    padding: 10px;
     width: 737px;
+    border: 3px solid black;
 }
 
 #level2 {
@@ -29,11 +33,15 @@
 }
 
 #CD {
+    padding: 10px;
     width: 737px;
+    border: 3px solid black;
 }
 
 #ice {
+    padding: 10px;
     width: 737px;
+    border: 3px solid black;
 }
 
 #videos {

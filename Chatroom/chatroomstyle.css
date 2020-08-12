@@ -59,3 +59,43 @@ body {
     margin-right: 33%;
     margin-left: 33%;
 }
+
+#discriminationChatroom {
+    display:flex;
+    justify-content: center;
+    margin-top: 70px;
+    border: 2px black solid;
+    background-color: wheat;
+    margin-right: 33%;
+    margin-left: 33%;
+}
+
+#pandemicChatroom {
+    display:flex;
+    justify-content: center;
+    margin-top: 70px;
+    border: 2px black solid;
+    background-color: wheat;
+    margin-right: 33%;
+    margin-left: 33%;
+}
+
+#currentChatroom {
+    display:flex;
+    justify-content: center;
+    margin-top: 70px;
+    border: 2px black solid;
+    background-color: wheat;
+    margin-right: 33%;
+    margin-left: 33%;
+}
+
+#environmentalChatroom {
+    display:flex;
+    justify-content: center;
+    margin-top: 70px;
+    border: 2px black solid;
+    background-color: wheat;
+    margin-right: 33%;
+    margin-left: 33%;
+}

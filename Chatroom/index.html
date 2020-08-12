@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="chatroomstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@900&display=swap" rel="stylesheet">
-    <link rel="icon" type="images/png" href="images/logo copy.jfif">
     <title>Chatroom</title>
 </head>
 <body>
@@ -26,12 +25,31 @@
         <button id="currentButton">Current Events</button>
         <button id="pandemicButton">Pandemic</button>
         </div>
-        <div id="chatroom"></div>
-        <br><br>
+        <div id="chatroomname">Discrimination Chatroom</div>        <div id="discriminationChatroom"></div>
+        <div id="environmentalChatroom"></div>
+        <div id="currentChatroom"></div>
+        <div id="pandemicChatroom"></div>
+                <br><br>
         <form>
-            <input type="text" id="user_chat">
-            <button id="Submit">Submit Chat</button>
+            <input type="text" id="Duser_chat">
+            <button id="discriminationSubmit">Submit Chat</button>
         </form>
+
+        <form>
+            <input type="text" id="Puser_chat">
+            <button id="pandemicSubmit">Submit Chat</button>
+        </form>
+
+        <form>
+            <input type="text" id="Euser_chat">
+            <button id="environmentalSubmit">Submit Chat</button>
+        </form>
+
+        <form>
+            <input type="text" id="Cuser_chat">
+            <button id="currentSubmit">Submit Chat</button>
+        </form>
+
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-app.js"></script>
@@ -60,17 +78,45 @@
         console.log("Success!")
 
         // get references
+        
 
-        let userInputTextbox = document.getElementById("user_chat")
-        let submitButton = document.getElementById("Submit")
-        let chatroomDiv = document.getElementById("chatroom")
-        let usernameTextbox = document.getElementById("username_textbox")
-        let saveButton = document.getElementById("save")
-        let beforeLoginDiv = document.getElementById("before_login")
-        let afterLoginDiv = document.getElementById("after_login")
+        let chatroomnameDiv = document.getElementById("chatroomname");        
+        let discriminationButton = document.getElementById("discriminationButton");
+        let environmentalButton = document.getElementById("environmentalButton");
+        let currentButton = document.getElementById("currentButton");
+        let pandemicButton = document.getElementById("pandemicButton");
+        let DuserInputTextbox = document.getElementById("Duser_chat");
+        let EuserInputTextbox = document.getElementById("Euser_chat");
+        let PuserInputTextbox = document.getElementById("Puser_chat");
+        let CuserInputTextbox = document.getElementById("Cuser_chat");
+        let discriminationsubmitButton = document.getElementById("discriminationSubmit");
+        let pandemicsubmitButton = document.getElementById("pandemicSubmit");
+        let environmentalsubmitButton = document.getElementById("environmentalSubmit");
+        let currentsubmitButton = document.getElementById("currentSubmit");
+        let chatroomDiv = document.getElementById("chatroom");
+        let discriminationChatroomDiv = document.getElementById("discriminationChatroom");
+        let environmentalChatroomDiv = document.getElementById("environmentalChatroom");
+        let currentChatroomDiv = document.getElementById("currentChatroom");
+        let pandemicChatroomDiv = document.getElementById("pandemicChatroom");
+        let usernameTextbox = document.getElementById("username_textbox");
+        let saveButton = document.getElementById("save");
+        let beforeLoginDiv = document.getElementById("before_login");
+        let afterLoginDiv = document.getElementById("after_login");
 
-        afterLoginDiv.style.display = "none"
-        beforeLoginDiv.style.display = "flex"
+        afterLoginDiv.style.display = "none";
+        beforeLoginDiv.style.display = "flex";
+        discriminationChatroomDiv.style.display = "flex";
+        environmentalChatroomDiv.style.display = "none";
+        currentChatroomDiv.style.display = "none";
+        pandemicChatroomDiv.style.display = "none";
+        discriminationsubmitButton.style.display = "flex";
+        pandemicsubmitButton.style.display = "none";
+        environmentalsubmitButton.style.display = "none";
+        currentsubmitButton.style.display = "none";
+        DuserInputTextbox.style.display = "flex";
+        EuserInputTextbox.style.display = "none";
+        PuserInputTextbox.style.display = "none";
+        CuserInputTextbox.style.display = "none";
         
 
         let username;
@@ -86,33 +132,211 @@
             afterLoginDiv.style.display = "flex"
         }
 
-        submitButton.onclick = function(event) {
-        event.preventDefault()
+        discriminationButton.onclick = function() {
+            discriminationChatroomDiv.style.display = "flex";
+            environmentalChatroomDiv.style.display = "none";
+            currentChatroomDiv.style.display = "none";
+            pandemicChatroomDiv.style.display = "none";
+            discriminationsubmitButton.style.display = "flex";
+            pandemicsubmitButton.style.display = "none";
+            environmentalsubmitButton.style.display = "none";
+            currentsubmitButton.style.display = "none";
+            DuserInputTextbox.style.display = "flex";
+            EuserInputTextbox.style.display = "none";
+            PuserInputTextbox.style.display = "none";
+            CuserInputTextbox.style.display = "none";
 
-        //time
-        
-        let now = new Date()
-        let timestamp = new Date().getTime()
-        console.log(now)
-        console.log(timestamp)
 
-        // save data to database
-        db.collection("chatroom").add({
-            "username": username,
-            "chat": userInputTextbox.value,
-            "timestamp": timestamp
-        })
+            chatroomnameDiv.innerHTML = "Discrimination Chatroom"        
+        }
 
-        userInputTextbox.value = ""
+        environmentalButton.onclick = function() {
+            discriminationChatroomDiv.style.display = "none";
+            environmentalChatroomDiv.style.display = "flex";
+            currentChatroomDiv.style.display = "none";
+            pandemicChatroomDiv.style.display = "none";
+            discriminationsubmitButton.style.display = "none";
+            pandemicsubmitButton.style.display = "none";
+            environmentalsubmitButton.style.display = "flex";
+            currentsubmitButton.style.display = "none";
+            DuserInputTextbox.style.display = "none";
+            EuserInputTextbox.style.display = "flex";
+            PuserInputTextbox.style.display = "none";
+            CuserInputTextbox.style.display = "none";
+
+
+            chatroomnameDiv.innerHTML = "Environmental Chatroom"        
+        }
+
+        currentButton.onclick = function() {
+            discriminationChatroomDiv.style.display = "none";
+            environmentalChatroomDiv.style.display = "none";
+            currentChatroomDiv.style.display = "flex";
+            pandemicChatroomDiv.style.display = "none";
+            discriminationsubmitButton.style.display = "none";
+            pandemicsubmitButton.style.display = "none";
+            environmentalsubmitButton.style.display = "none";
+            currentsubmitButton.style.display = "flex";
+            DuserInputTextbox.style.display = "none";
+            EuserInputTextbox.style.display = "none";
+            PuserInputTextbox.style.display = "none";
+            CuserInputTextbox.style.display = "flex";
+
+
+            chatroomnameDiv.innerHTML = "Current Chatroom"
+        }
+
+        pandemicButton.onclick = function() {
+            discriminationChatroomDiv.style.display = "none";
+            environmentalChatroomDiv.style.display = "none";
+            currentChatroomDiv.style.display = "none";
+            pandemicChatroomDiv.style.display = "flex";
+            discriminationsubmitButton.style.display = "none";
+            pandemicsubmitButton.style.display = "flex";
+            environmentalsubmitButton.style.display = "none";
+            currentsubmitButton.style.display = "none";
+            DuserInputTextbox.style.display = "none";
+            EuserInputTextbox.style.display = "none";
+            PuserInputTextbox.style.display = "flex";
+            CuserInputTextbox.style.display = "none";
+
+
+            chatroomnameDiv.innerHTML = "Pandemic Chatroom"        
+        }
+
+        discriminationsubmitButton.onclick = function(event) {
+            event.preventDefault()
+
+            //time
+            
+            let now = new Date()
+            let timestamp = new Date().getTime()
+            console.log(now)
+            console.log(timestamp)
+
+            // save data to database
+            db.collection("discriminationchatroom").add({
+                "username": username,
+                "discriminationChat": DuserInputTextbox.value,
+                "timestamp": timestamp
+            })
+
+            DuserInputTextbox.value = ""
+            CuserInputTextbox.value = ""
+            EuserInputTextbox.value = ""
+            PuserInputTextbox.value = ""
 
         }
 
-        db.collection("chatroom").orderBy("timestamp").onSnapshot(function(snapshot) {
+        environmentalsubmitButton.onclick = function(event) {
+            event.preventDefault()
 
-        chatroomDiv.innerHTML = ""
+            //time
+            
+            let now = new Date()
+            let timestamp = new Date().getTime()
+            console.log(now)
+            console.log(timestamp)
+
+            // save data to database
+            db.collection("environmentalchatroom").add({
+                "username": username,
+                "environmentalChat": EuserInputTextbox.value,
+                "timestamp": timestamp
+            })
+
+
+            DuserInputTextbox.value = ""
+            CuserInputTextbox.value = ""
+            EuserInputTextbox.value = ""
+            PuserInputTextbox.value = ""
+
+        }
+
+        pandemicsubmitButton.onclick = function(event) {
+            event.preventDefault()
+
+            //time
+            
+            let now = new Date()
+            let timestamp = new Date().getTime()
+            console.log(now)
+            console.log(timestamp)
+
+            // save data to database
+            db.collection("pandemicchatroom").add({
+                "username": username,
+                "pandemicChat": PuserInputTextbox.value,
+                "timestamp": timestamp
+            })
+
+
+            DuserInputTextbox.value = ""
+            CuserInputTextbox.value = ""
+            EuserInputTextbox.value = ""
+            PuserInputTextbox.value = ""
+
+        }
+
+        currentsubmitButton.onclick = function(event) {
+            event.preventDefault()
+
+            //time
+            
+            let now = new Date()
+            let timestamp = new Date().getTime()
+            console.log(now)
+            console.log(timestamp)
+
+            // save data to database
+            db.collection("currentchatroom").add({
+                "username": username,
+                "currentChat": CuserInputTextbox.value,
+                "timestamp": timestamp
+            })
+
+
+            DuserInputTextbox.value = ""
+            CuserInputTextbox.value = ""
+            EuserInputTextbox.value = ""
+            PuserInputTextbox.value = ""
+
+        }
+
+
+        db.collection("discriminationchatroom").orderBy("timestamp").onSnapshot(function(snapshot) {
+        
+        discriminationChatroomDiv.innerHTML = ""
         for (let i = 0; i < snapshot.docs.length; i++) {
-            chatroomDiv.innerHTML += snapshot.docs[i].data().username + ": ",
-            chatroomDiv.innerHTML += snapshot.docs[i].data().chat + "<br>"
+            discriminationChatroomDiv.innerHTML += snapshot.docs[i].data().username + ": ",
+            discriminationChatroomDiv.innerHTML += snapshot.docs[i].data().discriminationChat + "<br>"
+        }
+        })
+
+        db.collection("environmentalchatroom").orderBy("timestamp").onSnapshot(function(snapshot) {
+        
+        environmentalChatroomDiv.innerHTML = ""
+        for (let i = 0; i < snapshot.docs.length; i++) {
+            environmentalChatroomDiv.innerHTML += snapshot.docs[i].data().username + ": ",
+            environmentalChatroomDiv.innerHTML += snapshot.docs[i].data().environmentalChat + "<br>"
+        }
+        })
+
+        db.collection("pandemicchatroom").orderBy("timestamp").onSnapshot(function(snapshot) {
+        
+        pandemicChatroomDiv.innerHTML = ""
+        for (let i = 0; i < snapshot.docs.length; i++) {
+            pandemicChatroomDiv.innerHTML += snapshot.docs[i].data().username + ": ",
+            pandemicChatroomDiv.innerHTML += snapshot.docs[i].data().pandemicChat + "<br>"
+        }
+        })
+    
+        db.collection("currentchatroom").orderBy("timestamp").onSnapshot(function(snapshot) {
+        
+        currentChatroomDiv.innerHTML = ""
+        for (let i = 0; i < snapshot.docs.length; i++) {
+            currentChatroomDiv.innerHTML += snapshot.docs[i].data().username + ": ",
+            currentChatroomDiv.innerHTML += snapshot.docs[i].data().currentChat + "<br>"
         }
         })
 

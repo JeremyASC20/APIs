@@ -339,7 +339,6 @@
         
         currentChatroomDiv.innerHTML = ""
         for (let i = 0; i < snapshot.docs.length; i++) {
-            currentChatroomDiv.innerHTML += snapshot.docs[i].data().timestamp + " ",
             currentChatroomDiv.innerHTML += snapshot.docs[i].data().username + ": ",
             currentChatroomDiv.innerHTML += snapshot.docs[i].data().currentChat + "<br>"
         }
